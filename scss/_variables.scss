@@ -1,0 +1,6 @@
+@mixin texto($alineacion, $tipografia, $tamano, $color) {
+    text-align: $alineacion;
+    font-family: $tipografia;
+    font-size: $tamano;
+    color: $color;
+}

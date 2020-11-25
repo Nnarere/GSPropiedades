@@ -21,47 +21,54 @@ body {
     width: 140px; }
 
 /*INICIO*/
-.inicio1 {
-  margin-bottom: 50px;
-  height: 350px; }
-  .inicio1 .inicio1__titulo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-family: 'roboto';
-    font-weight: 700;
-    color: #242424;
-    text-shadow: 0.05em 0.05em 0.05em white;
-    text-align: center; }
+.inicio0 {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.inicio0__frase {
+  color: whitesmoke;
+  font-family: "roboto", sans-serif;
+  font-weight: 700;
+  font-size: 48px; }
+
+.inicio0__frase--imagen {
+  width: 50px; }
+
+.inicio2__titulo {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-top: solid #eb3d3d;
+  margin-top: 30px; }
 
 .inicio2__texto {
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 90px; }
+
+.inicio2__imagen {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: whitesmoke;
-  line-height: 2;
-  border-radius: 9px 9px 9px 9px;
-  -moz-border-radius: 9px 9px 9px 9px;
-  -webkit-border-radius: 9px 9px 9px 9px;
-  margin-bottom: 50px;
-  z-index: 999; }
-  .inicio2__texto .inicio2__texto--titulo {
-    text-align: center;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 25px; }
-  .inicio2__texto .inicio2__texto--parrafo {
-    list-style-image: url(../images/home-page.png);
-    text-align: justify;
-    font-family: "Assistant", sans-serif;
-    font-size: 20px; }
+  align-items: flex-end;
+  justify-content: center; }
 
-.inicio2__texto:hover {
-  animation: pulse;
-  animation-duration: 1s; }
+.inicio2__imagen--logo {
+  width: 50px; }
+
+.row--last {
+  border-bottom: solid #eb3d3d;
+  margin-bottom: 30px; }
 
 /*Quien Somos*/
 .gloria {
@@ -111,7 +118,7 @@ body {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  opacity: 0.7;
+  opacity: 0.9;
   background-color: #424242;
   padding-left: 20px;
   padding-right: 20px;
@@ -169,6 +176,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-around; }
 
+.tabla__card--arriendo {
+  margin-bottom: 20px; }
+
 /*CONTÁCTANOS*/
 #gmail {
   width: 30px; }
@@ -176,11 +186,14 @@ body {
 .escribenos {
   color: whitesmoke;
   line-height: 2.2;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: "Assistant", sans-serif;
+  font-size: 20px; }
 
 .formulario {
   color: whitesmoke;
-  font-family: "Assistant", sans-serif; }
+  font-family: "Assistant", sans-serif;
+  font-size: 20px; }
 
 .boton {
   margin-bottom: 15px; }
@@ -198,9 +211,15 @@ body {
   opacity: 0.8;
   position: relative;
   z-index: 1;
-  font-family: 'roboto'sans-serif; }
+  font-family: 'roboto'sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .footerGS .footerGS__contactanos {
+    text-align: left; }
+  .footerGS .footerGS__logo {
+    text-align: right; }
 
-.nombreEmpresa {
+.footerGS__contactanos--nombreEmpresa {
   font-family: 'roboto' sans-serif;
   font-weight: 700;
   font-style: normal; }
@@ -219,9 +238,28 @@ body {
 
 @media only screen and (max-width: 900px) {
   /*Inicio*/
-  .inicio1 {
-    margin: 0px;
-    height: 100px; }
+  .inicio2__titulo {
+    padding: auto;
+    margin: auto;
+    border-top: solid #eb3d3d; }
+  .inicio2__texto {
+    color: whitesmoke;
+    margin: auto;
+    height: auto;
+    text-align: justify;
+    margin: 10px; }
+  .inicio2__imagen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; }
+  .inicio2__imagen--logo {
+    width: 50px; }
+  .row--last {
+    border-bottom: solid #eb3d3d;
+    padding-bottom: 20px;
+    margin-bottom: 30px; }
   /*quien somos*/
   .gloria__texto--parrafo {
     margin: 10px; }
@@ -239,4 +277,16 @@ body {
   /*Propiedades Disponibles*/
   .tabla__card {
     display: flex;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+  /*Footer*/
+  .footerGS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .footerGS .footerGS__logo {
+      text-align: center;
+      padding-bottom: 30px; }
+    .footerGS .footerGS__contactanos {
+      text-align: center; }
+    .footerGS .footerGS__contactanos--nombreEmpresa {
+      padding-bottom: 15px; } }

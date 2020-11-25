@@ -31,55 +31,62 @@ body{
 }
 
 /*INICIO*/
-.inicio1{
-    margin-bottom: 50px;
-    height: 350px;
+.inicio0{
+    padding-bottom: 50px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-    .inicio1__titulo{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
-        font-family: 'roboto';
-        font-weight: 700;
-        color: rgb(36, 36, 36);
-        text-shadow: 0.05em 0.05em 0.05em rgb(255, 255, 255);
-        text-align: center;
-    }
+.inicio0__frase{
+    color: whitesmoke;
+    font-family:$letraTitulo;
+    font-weight: 700;
+    font-size: 48px;   
+}
+
+.inicio0__frase--imagen{
+    width: 50px;
+}
+
+.inicio2__titulo{
+    font-family: $letraInicio;
+    font-size: 40px;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-top: solid $rojo;
+    margin-top: 30px;
 }
 
 .inicio2__texto{
+    color: whitesmoke;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
-    background-color:$colorWeb;
-    line-height: 2;
-    border-radius: 9px 9px 9px 9px;
-    -moz-border-radius: 9px 9px 9px 9px;
-    -webkit-border-radius: 9px 9px 9px 9px;
-    margin-bottom: 50px;
-    z-index: 999;
+    font-family: $letraInicio;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 90px;
 
-    .inicio2__texto--titulo{
-        text-align: center;
-        font-family: $letraInicio;
-        font-size: 25px;
-    }
-
-    .inicio2__texto--parrafo{
-        list-style-image: url(../images/home-page.png);
-        text-align: justify;
-        font-family: $letraTexto;
-        font-size: 20px;
-    }
 }
 
-.inicio2__texto:hover{
-    animation:pulse;
-    animation-duration: 1s;
+.inicio2__imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.inicio2__imagen--logo{
+    width: 50px;
+}
+
+.row--last{
+    border-bottom: solid $rojo;
+    margin-bottom: 30px;
 }
 
 /*Quien Somos*/
@@ -133,7 +140,7 @@ body{
     align-items: center;
     margin-top: 20px;
     margin-bottom: 30px;
-    opacity: 0.7;
+    opacity: 0.9;
     background-color: rgb(66, 66, 66);
     padding-left: 20px;
     padding-right: 20px;
@@ -207,6 +214,10 @@ body{
     justify-content: space-around;
 }
 
+.tabla__card--arriendo{
+    margin-bottom: 20px;
+}
+
 /*CONTÁCTANOS*/
 
 #gmail{
@@ -217,11 +228,14 @@ body{
     color: $colorWeb;
     line-height: 2.2;
     margin-bottom: 10px;
+    font-family: $letraTexto;
+    font-size: 20px;
 }
 
 .formulario{
     color: $colorWeb;
     font-family: $letraTexto;
+    font-size: 20px;
 }
 
 .boton{
@@ -242,9 +256,19 @@ body{
     position: relative;
     z-index: 1;
     font-family: 'roboto'sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .footerGS__contactanos{
+        text-align:left;
+    }
+    
+    .footerGS__logo{
+        text-align: right;
+    }
 
 }
-.nombreEmpresa{
+.footerGS__contactanos--nombreEmpresa{
     font-family: 'roboto' sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -265,12 +289,44 @@ body{
     width: 12px;;
 }
 
+
+
 @media only screen and (max-width: 900px){
     /*Inicio*/
-    .inicio1{
-        margin:0px;
-        height: 100px;
+
+    .inicio2__titulo{
+        padding: auto;
+        margin: auto;
+        border-top: solid $rojo; 
     }
+
+    .inicio2__texto{
+        color: whitesmoke;
+        margin:auto;
+        height: auto;
+        text-align: justify;
+        margin:10px;
+    
+    }
+    
+    .inicio2__imagen{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+    }
+    
+    .inicio2__imagen--logo{
+        width: 50px;
+    }
+
+    
+.row--last{
+    border-bottom: solid $rojo;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
 
     /*quien somos*/
     .gloria__texto--parrafo{
@@ -297,5 +353,29 @@ body{
     .tabla__card{
         display: flex;
         flex-wrap: wrap;
+    }
+
+    /*Footer*/
+    
+    .footerGS{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .footerGS__logo{
+            text-align: center;
+            padding-bottom: 30px;
+           
+          }
+
+         .footerGS__contactanos{
+            text-align: center;
+        
+         }
+         .footerGS__contactanos--nombreEmpresa{
+            padding-bottom: 15px;
+         }
+    
+    
     }
 }

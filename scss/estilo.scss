@@ -100,13 +100,12 @@ body{
     color: whitesmoke;
 
     .gloria__foto{
-        animation:bounceInLeft;
+        animation:fadeInDown;
         animation-duration: 1s;
         text-align: center;
 
         .gloria__foto--imagen{
-            animation:fadeInLeftBig;
-            animation-duration: 1s;
+            
             border-radius: 200px 200px 0px 200px;
             -moz-border-radius: 200px 200px 0px 200px;
             -webkit-border-radius: 200px 200px 0px 200px;
@@ -244,7 +243,6 @@ body{
 
 /*footer*/ 
 .footerGS{
-    padding-top: 5px;
     margin-top: 5px;
     background-color: $amarillo;
     line-height: 1.7;
@@ -258,9 +256,13 @@ body{
     font-family: 'roboto'sans-serif;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-right: 0px;
+    padding-left: 0px;
 
     .footerGS__contactanos{
         text-align:left;
+        padding: 0px;
+        overflow: hidden;
     }
     
     .footerGS__logo{
@@ -289,10 +291,12 @@ body{
     width: 12px;;
 }
 
-
-
 @media only screen and (max-width: 900px){
     /*Inicio*/
+    .inicio0__frase{
+        font-size: 35px;
+        padding-bottom: 30px;
+    }
 
     .inicio2__titulo{
         padding: auto;
